@@ -31,7 +31,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnInventarios = new javax.swing.JToggleButton();
         btnVentas = new javax.swing.JToggleButton();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        contenedorModulos = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,20 +68,20 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnInventarios)
                 .addGap(18, 18, 18)
                 .addComponent(btnVentas)
-                .addContainerGap(386, Short.MAX_VALUE))
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
-        jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
-        jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
+        contenedorModulos.setBackground(new java.awt.Color(204, 204, 204));
+        contenedorModulos.setForeground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
+        javax.swing.GroupLayout contenedorModulosLayout = new javax.swing.GroupLayout(contenedorModulos);
+        contenedorModulos.setLayout(contenedorModulosLayout);
+        contenedorModulosLayout.setHorizontalGroup(
+            contenedorModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 832, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contenedorModulosLayout.setVerticalGroup(
+            contenedorModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -93,7 +93,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1)
+                .addComponent(contenedorModulos)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -102,19 +102,35 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jDesktopPane1))
+                    .addComponent(contenedorModulos))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    InventariosFrame inventario;
     private void btnInventariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventariosActionPerformed
-            
+        if (inventario == null) {
+            inventario = new InventariosFrame();
+            contenedorModulos.add(inventario);
+            contenedorModulos.getDesktopManager().maximizeFrame(inventario);
+            inventario.setVisible(true);
+        } else {
+            contenedorModulos.getDesktopManager().maximizeFrame(inventario);
+        }
     }//GEN-LAST:event_btnInventariosActionPerformed
 
+    VentasFrame ventas;
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
-        // TODO add your handling code here:
+        if (ventas == null) {
+            ventas = new VentasFrame();
+            contenedorModulos.add(ventas);
+            contenedorModulos.getDesktopManager().maximizeFrame(ventas);
+            ventas.setVisible(true);
+        } else {
+            contenedorModulos.getDesktopManager().maximizeFrame(ventas);
+        }
     }//GEN-LAST:event_btnVentasActionPerformed
 
     /**
@@ -155,8 +171,8 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnInventarios;
     private javax.swing.JToggleButton btnVentas;
+    private javax.swing.JDesktopPane contenedorModulos;
     private javax.swing.ButtonGroup grupoModulos;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

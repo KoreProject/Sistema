@@ -9,12 +9,12 @@ package mx.ah.gui;
  *
  * @author Ing. Abdon Cruz
  */
-public class Inventarios extends javax.swing.JInternalFrame {
+public class VentasFrame extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Inventarios
+     * Creates new form Ventas
      */
-    public Inventarios() {
+    public VentasFrame() {
         initComponents();
     }
 
@@ -26,6 +26,8 @@ public class Inventarios extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        setTitle("Ventas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

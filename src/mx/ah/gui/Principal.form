@@ -71,7 +71,7 @@
                   <Component id="btnInventarios" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnVentas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="400" max="32767" attributes="0"/>
+                  <EmptySpace pref="555" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

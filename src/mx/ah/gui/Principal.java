@@ -68,7 +68,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnInventarios)
                 .addGap(18, 18, 18)
                 .addComponent(btnVentas)
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addContainerGap(555, Short.MAX_VALUE))
         );
 
         contenedorModulos.setBackground(new java.awt.Color(204, 204, 204));

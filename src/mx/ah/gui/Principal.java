@@ -36,6 +36,7 @@ public class Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         grupoModulos.add(btnInventarios);
+        btnInventarios.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnInventarios.setText("Inventarios");
         btnInventarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +45,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         grupoModulos.add(btnVentas);
+        btnVentas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnVentas.setText("Ventas");
         btnVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,19 +58,19 @@ public class Principal extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInventarios)
-                    .addComponent(btnVentas))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnInventarios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnVentas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(btnInventarios)
+                .addContainerGap()
+                .addComponent(btnInventarios, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnVentas)
-                .addContainerGap(555, Short.MAX_VALUE))
+                .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(549, Short.MAX_VALUE))
         );
 
         contenedorModulos.setBackground(new java.awt.Color(204, 204, 204));
@@ -78,7 +80,7 @@ public class Principal extends javax.swing.JFrame {
         contenedorModulos.setLayout(contenedorModulosLayout);
         contenedorModulosLayout.setHorizontalGroup(
             contenedorModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 832, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
         );
         contenedorModulosLayout.setVerticalGroup(
             contenedorModulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,8 +95,8 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contenedorModulos)
-                .addContainerGap())
+                .addComponent(contenedorModulos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
